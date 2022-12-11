@@ -1,5 +1,4 @@
 // import important parts of sequelize library
-const { DECIMAL } = require('sequelize');
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
@@ -26,6 +25,7 @@ Product.init(
       validate: {
         isDecimal: true,
       },
+      
     },
     stock: {
       type: DataTypes.INTEGER,
